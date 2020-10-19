@@ -1,5 +1,5 @@
--   id: pyspark-docker
-    name: pyspark (via docker)
-    description: pyspark
+-   id: pytorch-docker
+    name: pytorch (via docker)
+    description: pytorch
     entry: /entrypoint.sh
     language: docker
