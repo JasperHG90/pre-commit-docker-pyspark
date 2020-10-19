@@ -1,6 +1,8 @@
-FROM godatadriven/pyspark:2.4.4
+FROM continuumio/miniconda3
 
 ADD entrypoint.sh /entrypoint.sh
+RUN apt-get update
+RUN conda install pytorch -c pytorch -y
 RUN chgrp root /etc/passwd && \
     chmod 666 /etc/passwd && \
     chmod +x /entrypoint.sh
